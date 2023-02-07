@@ -67,6 +67,18 @@ chmod +x /usr/bin/jaml
 
 :bulb: _The `/usr/bin/jaml` path is just an example, fell free to replace by any custom binary file path._
 
+### Checksums
+
+Some checksum files are available to verify the `jaml` binary integrity:
+
+- [jaml.md5](https://github.com/yannoff/jaml/releases/latest/download/jaml.md5)
+- [jaml.sha384](https://github.com/yannoff/jaml/releases/latest/download/jaml.sha384)
+
+_Here is an example using PHP_
+
+```php
+echo hash_file('sha384', 'https://github.com/yannoff/jaml/releases/latest/download/jaml');
+```
 
 ## Credits
 
