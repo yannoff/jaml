@@ -1,0 +1,19 @@
+#
+# This file was generated automatically by Offenbach
+# @see https://github.com/yannoff/offenbach for details
+#
+name: yannoff/jaml
+description: 'Easy-to-use JSON <=> YAML converter'
+type: project
+license: MIT
+authors:
+    -
+        name: Yannoff
+        homepage: 'https://github.com/yannoff'
+autoload:
+    psr-4:
+        Yannoff\Jaml\: src/
+require:
+    # Force console version 1.4 for verbosity feature
+    yannoff/console: ^1.4
+    yannoff/yamltools: ^1.4
