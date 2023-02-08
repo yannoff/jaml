@@ -58,7 +58,7 @@ class JamlCommand extends Command
      */
     public function configure()
     {
-        $helpText = 'Performs a YAML => JSON or JSON => YAML Conversion';
+        $helpText = 'Performs either a YAML=>JSON or JSON=>YAML conversion, depending on the detected input format';
 
         $this
             ->setHelp($helpText)
@@ -78,7 +78,7 @@ class JamlCommand extends Command
             ->addArgument(
                 'infile',
                 Argument::OPTIONAL,
-                'Input file. If none provided (or `-` is used), use standard input'
+                'Input file (JSON/YAML) - If none provided, use standard input'
             )
         ;
     }
@@ -95,7 +95,7 @@ class JamlCommand extends Command
         if ($this->getOption('version')) {
             $args = $_SERVER['argv'];
             array_shift($args);
-            $args = array_filter($args, function($arg) { return $arg !== '--version'; });
+            $args = array_filter($args, function($arg) { return !in_array($arg,['--version', '-V']); });
             return $this->getApplication()->get(Application::COMMAND_VERS)->run($args);
         }
 
@@ -130,6 +130,16 @@ class JamlCommand extends Command
         }
 
         return 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getSynopsis($tab = Formatter::TAB)
+    {
+        $format = "{$tab}%s [options] <infile>\n{$tab}cat <infile> | %s [options]";
+
+        return sprintf($format, $this->name, $this->name);
     }
 
     /**
