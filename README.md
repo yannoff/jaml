@@ -36,7 +36,7 @@ cat file.json | jaml
 
 ### Requirements
 
-- `php` 5.5+
+- [`php`](https://www.php.net/) 5.5+ or [`PAW`](https://github.com/yannoff/p-a-w)
 
 ### Quick install
 
