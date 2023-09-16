@@ -2,7 +2,7 @@
 
 Easy-to-use JSON <=> YAML converter
 
-[![Latest stable release](https://img.shields.io/badge/Release-1.0.0-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
+[![Latest stable release](https://img.shields.io/badge/Release-1.1.0-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
 [![MIT License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/yannoff/jaml/blob/master/LICENSE "MIT License")
 
 ## Usage

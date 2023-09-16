@@ -7,8 +7,10 @@ Easy-to-use JSON <=> YAML converter
 
 ## Usage
 
-- [YAML to JSON Conversion](#converting-yaml-to-json)
-- [JSON to YAML Conversion](#converting-json-to-yaml)
+_Input format is detected automatically, hence:_
+
+- [YAML input will be converted to JSON](#converting-yaml-to-json)
+- [JSON input will be converted to YAML](#converting-json-to-yaml)
 
 ### Converting YAML to JSON
 
@@ -34,7 +36,7 @@ cat file.json | jaml
 
 ### Requirements
 
-- `php` 5.5+
+- [`php`](https://www.php.net/) 5.5+ or [`PAW`](https://github.com/yannoff/p-a-w)
 
 ### Quick install
 
