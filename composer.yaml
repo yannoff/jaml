@@ -14,6 +14,5 @@ autoload:
     psr-4:
         Yannoff\Jaml\: src/
 require:
-    # Force console version 1.4 for verbosity feature
-    yannoff/console: ^1.4
+    yannoff/console: ^1.5.0
     yannoff/yamltools: ^1.4

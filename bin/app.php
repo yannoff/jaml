@@ -26,15 +26,9 @@ use Yannoff\Jaml\Command\JamlCommand;
 
 define('APP_NAME', 'jaml');
 
-$application = new Application('jaml', '@@version@@');
-
-$application->addCommands([
-    new JamlCommand(APP_NAME),
-]);
+$application = new Application('jaml', '@@version@@', new JamlCommand(APP_NAME));
 
 $args = $_SERVER['argv'];
-$app = array_shift($args);
 
 $application
-    ->get(APP_NAME)
     ->run($args);
