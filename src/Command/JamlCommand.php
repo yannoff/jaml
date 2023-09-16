@@ -64,12 +64,6 @@ class JamlCommand extends Command
             ->setHelp($helpText)
             ->setDescription($helpText)
             ->addOption(
-                'version',
-                'V',
-                Option::FLAG,
-                'Display version and exit'
-            )
-            ->addOption(
                 'verbose',
                 'v',
                 Option::FLAG,
@@ -92,12 +86,6 @@ class JamlCommand extends Command
             $this->verbosity = self::DEBUG;
         }
 
-        if ($this->getOption('version')) {
-            $args = $_SERVER['argv'];
-            array_shift($args);
-            $args = array_filter($args, function($arg) { return !in_array($arg,['--version', '-V']); });
-            return $this->getApplication()->get(Application::COMMAND_VERS)->run($args);
-        }
 
         try {
 
