@@ -32,6 +32,20 @@ jaml <file.json>
 cat file.json | jaml
 ```
 
+### Available options
+
+**`-h, --help`**
+
+*Display help message*
+
+**`-v, --verbose`**
+
+*Increase the verbosity of jaml output*
+
+**`--version`**
+
+*Display version and exit*
+
 ## Installation
 
 ### Requirements
