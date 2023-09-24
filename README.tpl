@@ -34,6 +34,10 @@ cat file.json | jaml
 
 ### Available options
 
+**`-i, --interactive`**
+
+*Run in interactive mode*
+
 **`-h, --help`**
 
 *Display help message*
