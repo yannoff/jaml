@@ -69,6 +69,12 @@ class JamlCommand extends Command
                 Option::FLAG,
                 'Turn on verbose mode (debug messages on STDERR)'
             )
+            ->addOption(
+                'interactive',
+                'i',
+                Option::FLAG,
+                'Run JAML in interactive mode'
+            )
             ->addArgument(
                 'infile',
                 Argument::OPTIONAL,
@@ -90,8 +96,13 @@ class JamlCommand extends Command
         try {
 
             $infile = $this->getArgument('infile');
+            $interactive = $this->getOption('interactive');
 
-            $contents = $this->getContents($infile);
+            if ($interactive) {
+                $this->errorln("Welcome to JAML interactive mode ! \nType your contents here and press CTRL+D to trigger conversion");
+            }
+
+            $contents = $this->getContents($interactive, $infile);
 
             if ($this->isJson($contents)) {
                 $this->debug('Detected input looks like a JSON formatted contents...');
@@ -153,14 +164,15 @@ class JamlCommand extends Command
     /**
      * Get contents from input file or stdin if file is null or "-"
      *
-     * @param string|null $filename Relative or absolute path to the input file
+     * @param bool        $interactive Enable/disable listening on user input
+     * @param string|null $filename    Relative or absolute path to the input file
      *
      * @return false|string
      */
-    protected function getContents($filename = null)
+    protected function getContents($interactive, $filename = null)
     {
         if (null === $filename || '-' === $filename) {
-            return $this->ioread();
+            return $this->ioread($interactive);
         }
 
         return \file_get_contents($filename);

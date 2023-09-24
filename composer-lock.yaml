@@ -6,7 +6,7 @@ _readme:
     - 'This file locks the dependencies of your project to a known state'
     - 'Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies'
     - 'This file is @generated automatically'
-content-hash: f80b0731ecef396c7b65a1031699c461
+content-hash: 036d300de3e91a19210d0572331caccb
 packages:
     -
         name: symfony/polyfill-ctype
@@ -120,15 +120,15 @@ packages:
         time: '2020-10-24T10:57:07+00:00'
     -
         name: yannoff/console
-        version: 1.5.0
+        version: 1.6.0
         source:
             type: git
             url: 'https://github.com/yannoff/console.git'
-            reference: b0b94ee07097f7d49236b5a07438f6336ff76037
+            reference: e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243
         dist:
             type: zip
-            url: 'https://api.github.com/repos/yannoff/console/zipball/b0b94ee07097f7d49236b5a07438f6336ff76037'
-            reference: b0b94ee07097f7d49236b5a07438f6336ff76037
+            url: 'https://api.github.com/repos/yannoff/console/zipball/e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243'
+            reference: e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243
             shasum: ''
         type: library
         autoload:
@@ -145,8 +145,8 @@ packages:
         homepage: 'https://github.com/yannoff/console'
         support:
             issues: 'https://github.com/yannoff/console/issues'
-            source: 'https://github.com/yannoff/console/tree/1.5.0'
-        time: '2023-09-16T12:36:27+00:00'
+            source: 'https://github.com/yannoff/console/tree/1.6.0'
+        time: '2023-09-24T18:14:50+00:00'
     -
         name: yannoff/y-a-m-l
         version: 1.1.5
@@ -226,4 +226,4 @@ prefer-stable: false
 prefer-lowest: false
 platform: []
 platform-dev: []
-plugin-api-version: 2.1.0
+plugin-api-version: 2.2.0
