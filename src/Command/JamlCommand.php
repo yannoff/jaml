@@ -20,6 +20,8 @@ use Yannoff\Component\Console\Application;
 use Yannoff\Component\Console\Command;
 use Yannoff\Component\Console\Definition\Argument;
 use Yannoff\Component\Console\Definition\Option;
+use Yannoff\Component\Console\IO\Output\Formatter;
+use Yannoff\Component\Console\IO\Output\Verbosity;
 use Yannoff\YamlTools\Encoder\Json;
 use Yannoff\YamlTools\Encoder\Yaml;
 use Yannoff\YamlTools\Exception\RuntimeWarning;
@@ -32,27 +34,6 @@ use Yannoff\YamlTools\Exception\RuntimeWarning;
  */
 class JamlCommand extends Command
 {
-    /**
-     * The line-ending char
-     *
-     * @var string
-     */
-    const LF = "\n";
-
-    /**
-     * Error verbosity level: message always shown
-     *
-     * @var int
-     */
-    const ERROR = 0;
-
-    /**
-     * Debug verbosity level: message shown only in verbose mode
-     *
-     * @var int
-     */
-    const DEBUG = 1;
-
     /**
      * {@inheritdoc}
      */
@@ -89,7 +70,7 @@ class JamlCommand extends Command
     public function execute()
     {
         if ($this->getOption('verbose')) {
-            $this->verbosity = self::DEBUG;
+            $this->verbosity = Verbosity::DEBUG;
         }
 
 
@@ -114,7 +95,7 @@ class JamlCommand extends Command
                 $out = $this->toJson($data);
             }
 
-            $out = \rtrim($out, self::LF) . self::LF;
+            $out = \rtrim($out, Formatter::LF) . Formatter::LF;
 
             // In case the dump() result is 'null', don't write to file
             if ('null' == \trim($out)) {
@@ -148,7 +129,7 @@ class JamlCommand extends Command
      */
     protected function error($message)
     {
-        $this->dmesg($message, self::ERROR);
+        $this->dmesg($message, Verbosity::ERROR);
     }
 
     /**
@@ -158,7 +139,7 @@ class JamlCommand extends Command
      */
     protected function debug($message)
     {
-        $this->dmesg($message, self::DEBUG);
+        $this->dmesg($message, Verbosity::DEBUG);
     }
 
     /**
