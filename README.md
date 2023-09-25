@@ -2,7 +2,7 @@
 
 Easy-to-use JSON <=> YAML converter
 
-[![Latest stable release](https://img.shields.io/badge/Release-1.1.0-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
+[![Latest stable release](https://img.shields.io/badge/Release-1.2.0-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
 [![MIT License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/yannoff/jaml/blob/master/LICENSE "MIT License")
 
 ## Usage
@@ -31,6 +31,24 @@ jaml <file.json>
 # or using piped standard input:
 cat file.json | jaml
 ```
+
+### Available options
+
+**`-i, --interactive`**
+
+*Run in interactive mode*
+
+**`-h, --help`**
+
+*Display help message*
+
+**`-v, --verbose`**
+
+*Increase the verbosity of jaml output*
+
+**`--version`**
+
+*Display version and exit*
 
 ## Installation
 
