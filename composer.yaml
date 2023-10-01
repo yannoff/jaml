@@ -14,5 +14,5 @@ autoload:
     psr-4:
         Yannoff\Jaml\: src/
 require:
-    yannoff/console: ^1.6
-    yannoff/yamltools: ^1.4
+    yannoff/console: ^2.0
+    yannoff/yamltools: ^1.5
