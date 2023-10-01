@@ -80,7 +80,7 @@ class JamlCommand extends Command
             $interactive = $this->getOption('interactive');
 
             if ($interactive) {
-                $this->errorln("Welcome to JAML interactive mode ! \nType your contents here and press CTRL+D to trigger conversion");
+                $this->error("Welcome to JAML interactive mode ! \nType your contents here and press CTRL+D to trigger conversion");
             }
 
             $contents = $this->getContents($interactive, $infile);
@@ -102,7 +102,7 @@ class JamlCommand extends Command
                 throw new RuntimeWarning('No contents generated');
             }
 
-            $this->iowrite($out, null);
+            $this->write($out, null);
 
         } catch (\Exception $e) {
             $this->debug($e);
@@ -120,16 +120,6 @@ class JamlCommand extends Command
         $format = "{$tab}%s [options] <infile>\n{$tab}cat <infile> | %s [options]";
 
         return sprintf($format, $this->name, $this->name);
-    }
-
-    /**
-     * Print message with ERROR verbosity level
-     *
-     * @param string $message
-     */
-    protected function error($message)
-    {
-        $this->dmesg($message, Verbosity::ERROR);
     }
 
     /**
@@ -153,7 +143,7 @@ class JamlCommand extends Command
     protected function getContents($interactive, $filename = null)
     {
         if (null === $filename || '-' === $filename) {
-            return $this->ioread($interactive);
+            return $this->read($interactive);
         }
 
         return \file_get_contents($filename);

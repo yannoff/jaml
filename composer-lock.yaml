@@ -6,7 +6,7 @@ _readme:
     - 'This file locks the dependencies of your project to a known state'
     - 'Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies'
     - 'This file is @generated automatically'
-content-hash: 036d300de3e91a19210d0572331caccb
+content-hash: 82e6c43658f9edd4ea087c0fe0719012
 packages:
     -
         name: symfony/polyfill-ctype
@@ -120,15 +120,15 @@ packages:
         time: '2020-10-24T10:57:07+00:00'
     -
         name: yannoff/console
-        version: 1.6.0
+        version: 2.0.0
         source:
             type: git
             url: 'https://github.com/yannoff/console.git'
-            reference: e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243
+            reference: 8023f5ce918efe43f10edf521dffdfe6dd974b92
         dist:
             type: zip
-            url: 'https://api.github.com/repos/yannoff/console/zipball/e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243'
-            reference: e7ef08975e6ffdf95b70f2cb4c0e5d03ccd11243
+            url: 'https://api.github.com/repos/yannoff/console/zipball/8023f5ce918efe43f10edf521dffdfe6dd974b92'
+            reference: 8023f5ce918efe43f10edf521dffdfe6dd974b92
             shasum: ''
         type: library
         autoload:
@@ -145,8 +145,8 @@ packages:
         homepage: 'https://github.com/yannoff/console'
         support:
             issues: 'https://github.com/yannoff/console/issues'
-            source: 'https://github.com/yannoff/console/tree/1.6.0'
-        time: '2023-09-24T18:14:50+00:00'
+            source: 'https://github.com/yannoff/console/tree/2.0.0'
+        time: '2023-10-01T09:45:44+00:00'
     -
         name: yannoff/y-a-m-l
         version: 1.1.5
@@ -182,22 +182,22 @@ packages:
         time: '2021-09-12T13:59:09+00:00'
     -
         name: yannoff/yamltools
-        version: 1.4.8
+        version: 1.5.0
         source:
             type: git
             url: 'https://github.com/yannoff/yamltools.git'
-            reference: b7f293d121e6c27e7e0aa317cc54dd8a5ca004ac
+            reference: ba7cb1c06ac7da3ea12ad4dc1ec2cce80442e78c
         dist:
             type: zip
-            url: 'https://api.github.com/repos/yannoff/yamltools/zipball/b7f293d121e6c27e7e0aa317cc54dd8a5ca004ac'
-            reference: b7f293d121e6c27e7e0aa317cc54dd8a5ca004ac
+            url: 'https://api.github.com/repos/yannoff/yamltools/zipball/ba7cb1c06ac7da3ea12ad4dc1ec2cce80442e78c'
+            reference: ba7cb1c06ac7da3ea12ad4dc1ec2cce80442e78c
             shasum: ''
         require:
             ext-json: '*'
             php: '>=5.5'
             symfony/polyfill-ctype: '<=1.19.0'
             symfony/yaml: ^3.4
-            yannoff/console: ^1.2
+            yannoff/console: ^2.0
             yannoff/y-a-m-l: ^1.1
         bin:
             - bin/yamltools
@@ -216,8 +216,8 @@ packages:
         homepage: 'https://github.com/yannoff/yamltools'
         support:
             issues: 'https://github.com/yannoff/yamltools/issues'
-            source: 'https://github.com/yannoff/yamltools/tree/1.4.8'
-        time: '2023-02-03T21:04:19+00:00'
+            source: 'https://github.com/yannoff/yamltools/tree/1.5.0'
+        time: '2023-10-01T16:30:49+00:00'
 packages-dev: []
 aliases: []
 minimum-stability: stable
