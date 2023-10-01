@@ -70,6 +70,8 @@ chmod +x /usr/bin/jaml
 
 ## Credits
 
+_**JAML** leverages [offenbach](https://github.com/yannoff/offenbach) for PHP dependency management._
+
 Compiled as a PHAR self-executable using [Box](https://github.com/box-project/box2).
 
 ## License
