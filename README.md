@@ -16,7 +16,7 @@ _Input format is detected automatically, hence:_
 
 ```bash
 # The classic way:
-jaml <file.yaml>
+jaml <file.yaml|url-to-yaml-contents>
 
 # or using piped standard input:
 cat file.yaml | jaml
@@ -26,10 +26,65 @@ cat file.yaml | jaml
 
 ```bash
 # The classic way:
-jaml <file.json>
+jaml <file.json|url-to-json-contents>
 
 # or using piped standard input:
 cat file.json | jaml
+```
+
+### Examples
+
+_**Converting remote JSON contents over https**_
+
+```bash
+jaml https://repo.packagist.org/packages/list.json?vendor=yannoff
+```
+
+_Output:_
+
+```yaml
+packageNames:
+    - yannoff/collections
+    - yannoff/composer-dotenv-handler
+    - yannoff/console
+    - yannoff/handyman
+    - yannoff/lumiere-ui
+    - yannoff/lumiere-utils
+    - yannoff/symfony-boilerplate
+    - yannoff/y-a-m-l
+    - yannoff/yamltools
+```
+
+_**Converting a YAML file contents**_
+
+```bash
+jaml composer.yaml
+```
+
+_Output:_
+
+```json
+{
+    "name": "yannoff/jaml",
+    "description": "Easy-to-use JSON <=> YAML converter",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yannoff",
+            "homepage": "https://github.com/yannoff"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Yannoff\\Jaml\\": "src/"
+        }
+    },
+    "require": {
+        "yannoff/console": "^2.0",
+        "yannoff/yamltools": "^1.5"
+    }
+}
 ```
 
 ### Available options
