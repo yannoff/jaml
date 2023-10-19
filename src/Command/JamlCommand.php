@@ -70,7 +70,7 @@ class JamlCommand extends Command
     public function execute()
     {
         if ($this->getOption('verbose')) {
-            $this->verbosity = Verbosity::DEBUG;
+            $this->setVerbosity(Verbosity::DEBUG);
         }
 
 
@@ -129,7 +129,8 @@ class JamlCommand extends Command
      */
     protected function debug($message)
     {
-        $this->dmesg($message, Verbosity::DEBUG);
+        $pretty = sprintf('[%s] %s', $this->application->getName(), $message);
+        $this->dmesg($pretty, Verbosity::DEBUG);
     }
 
     /**
