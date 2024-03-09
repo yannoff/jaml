@@ -1,6 +1,5 @@
 #!/bin/bash
 
-BOXBIN=`dirname $0`/box
 BINDIR=bin
 
 oldversion=`${BINDIR}/jaml --version --raw`
@@ -37,7 +36,7 @@ sed -i "s/@@version@@/${version}/" ${BINDIR}/app.php
 sed "s/@@version@@/${version}/" README.tpl > README.md
 
 # Launch box build command
-php -d phar.readonly=0 $BOXBIN build "$@"
+phpcc --main ${BINDIR}/app.php --output ${BINDIR}/jaml.phar --dir src/:php --dir vendor/:php --banner .banner
 
 # Post-build processing: 
 # - remove phar extension from binary name
