@@ -20,7 +20,7 @@ use Yannoff\Component\Console\Application;
 use Yannoff\Component\Console\Command;
 use Yannoff\Component\Console\Definition\Argument;
 use Yannoff\Component\Console\Definition\Option;
-use Yannoff\Component\Console\IO\Output\Formatter;
+use Yannoff\Component\Console\IO\ASCII;
 use Yannoff\Component\Console\IO\Output\Verbosity;
 use Yannoff\YamlTools\Encoder\Json;
 use Yannoff\YamlTools\Encoder\Yaml;
@@ -95,7 +95,7 @@ class JamlCommand extends Command
                 $out = $this->toJson($data);
             }
 
-            $out = \rtrim($out, Formatter::LF) . Formatter::LF;
+            $out = \rtrim($out, ASCII::LF) . ASCII::LF;
 
             // In case the dump() result is 'null', don't write to file
             if ('null' == \trim($out)) {
@@ -115,7 +115,7 @@ class JamlCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function getSynopsis($tab = Formatter::TAB)
+    protected function getSynopsis($tab = ASCII::TAB)
     {
         $format = "{$tab}%s [options] <infile>\n{$tab}cat <infile> | %s [options]";
 
