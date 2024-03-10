@@ -2,7 +2,7 @@
 
 Easy-to-use JSON <=> YAML converter
 
-[![Latest stable release](https://img.shields.io/badge/Release-1.3.0-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
+[![Latest stable release](https://img.shields.io/badge/Release-1.3.1-blue)](https://github.com/yannoff/jaml/releases/latest "Latest stable release")
 [![MIT License](https://img.shields.io/badge/License-MIT-lightgrey)](https://github.com/yannoff/jaml/blob/master/LICENSE "MIT License")
 
 ## Usage
@@ -139,7 +139,7 @@ echo hash_file('sha384', 'https://github.com/yannoff/jaml/releases/latest/downlo
 
 _**JAML** leverages [offenbach](https://github.com/yannoff/offenbach) for PHP dependency management._
 
-Compiled as a PHAR self-executable using [Box](https://github.com/box-project/box2).
+Compiled as a PHAR self-executable using [PHP Code Compiler](https://github.com/yannoff/phpcc).
 
 ## License
 
